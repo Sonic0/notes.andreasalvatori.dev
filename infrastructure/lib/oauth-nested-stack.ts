@@ -28,12 +28,12 @@ export class Oauth2PoliciesStack extends cdk.NestedStack {
     const rawEndpoint = 'token.actions.githubusercontent.com';
     const providerUrl = `https://${rawEndpoint}`;
     const repoName = props.domainName;
-
-    const githubOidcProvider = new iam.OpenIdConnectProvider(this, 'GithubOIDC', {
-      url: providerUrl,
-      thumbprints: props.thumbprints ?? GITHUB_OIDC_THUMBPRINTS,
-      clientIds: ['sts.amazonaws.com']
-    })
+    
+    // OIDC already created with the infrastructure of andreasalvatori.dev
+    const githubOidcProvider = iam.OpenIdConnectProvider.fromOpenIdConnectProviderArn(
+      this, 'GithubOIDC',
+      `arn:aws:iam::${this.account}:oidc-provider/token.actions.githubusercontent.com`
+    )
 
     const githubActionsRole = new iam.Role(this, "DeployIntoBucketRole", {
       maxSessionDuration: Duration.hours(1),

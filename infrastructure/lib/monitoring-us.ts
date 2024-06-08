@@ -7,7 +7,8 @@ import {
   aws_sns as sns,
   aws_sns_subscriptions as snsSubscriptions,
   aws_cloudwatch as cloudwatch,
-  aws_cloudwatch_actions as cw_actions
+  aws_cloudwatch_actions as cw_actions,
+  aws_ssm as ssm
 } from 'aws-cdk-lib'
 
 export interface StackResources {
@@ -21,7 +22,7 @@ export class Monitoring extends cdk.Stack {
     super(scope, id, props)
 
     const isProd = props?.deployEnv === 'prod'
-    
+
     const alarmsTopic = new sns.Topic(this, 'Alarm topic', {
       displayName: `SendEmail${props.deployEnv}`
     });

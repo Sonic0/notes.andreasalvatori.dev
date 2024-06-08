@@ -30,6 +30,7 @@ const { certificate, ImportedR53HostedZone } = new CertificateStack(
     crossRegionReferences: true,
     deployEnv,
     domainName,
+    mainDomainName: getMainDomain(domainName) || '',
   }
 )
 
@@ -45,7 +46,8 @@ const { bucket, distribution, notificationsEmail } = new SiteStack(
     deployEnv,
     domainName,
     R53HostedZone: ImportedR53HostedZone,
-    certificate
+    certificate,
+    notificationsEmailSecretName: `/${getMainDomain(domainName)}/${deployEnv}/alarmsEmail`
   }
 )
 
@@ -56,6 +58,15 @@ new Monitoring(
     crossRegionReferences: true,
     deployEnv,
     distribution,
-    notificationsEmail: notificationsEmail
+    notificationsEmail
   }
 )
+
+function getMainDomain(url: string) {
+  const regex = /([a-zA-Z0-9-]+)\.([a-zA-Z]{2,})$/;
+  const match = url.match(regex);
+  if (match) {
+    return match[0];
+  }
+  return null;
+}

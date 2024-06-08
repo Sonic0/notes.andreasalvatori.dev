@@ -20,7 +20,8 @@ export interface StackResources {
   readonly deployEnv: string,
   readonly domainName: string,
   R53HostedZone: route53.IHostedZone,
-  certificate: acm.Certificate
+  certificate: acm.Certificate,
+  readonly notificationsEmailSecretName: string
 }
 
 export class SiteStack extends cdk.Stack {
@@ -71,10 +72,10 @@ export class SiteStack extends cdk.Stack {
       }
     )
     
-    // Import email address from a Parameter Store parameter
+    // Import email address from a Parameter Store parameter to share it with other Stacks
     this.notificationsEmail = ssm.StringParameter.valueForStringParameter(
-      this, `/${props.domainName}/${props.deployEnv}/alarmsEmail`
-    ); // latest version
+      this, props.notificationsEmailSecretName
+    ) // latest version
 
   }
 }

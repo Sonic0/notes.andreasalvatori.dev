@@ -38,6 +38,23 @@ export class StaticSiteStack extends cdk.NestedStack {
       exportName: 'BlogBucketName'
     });
 
+    // Blog Log Bucket
+    const LogBucket = new s3.Bucket(this, 'CFLogBucket', {
+      bucketName: `${props.domainName}-${props?.deployEnv}-logs`,
+      accessControl: cdk.aws_s3.BucketAccessControl.BUCKET_OWNER_FULL_CONTROL,
+      blockPublicAccess: s3.BlockPublicAccess.BLOCK_ALL,
+      removalPolicy: cdk.RemovalPolicy.DESTROY,
+      autoDeleteObjects: true,
+      objectOwnership: cdk.aws_s3.ObjectOwnership.OBJECT_WRITER,
+      lifecycleRules: [{
+        transitions: [{
+          storageClass: s3.StorageClass.DEEP_ARCHIVE,
+          transitionAfter: cdk.Duration.days(15)
+        }],
+        expiration: Duration.days(30)
+      }]
+    })
+
     // CF OAI (Legacy). AOC is not currently supported with CDK. Check this out in the future.
     const originAccessIdentity = new cf.OriginAccessIdentity(this, 'CfOriginAccessIdentity')
 
@@ -92,8 +109,15 @@ export class StaticSiteStack extends cdk.NestedStack {
         }
       ],
       minimumProtocolVersion: cf.SecurityPolicyProtocol.TLS_V1_2_2021,
-      httpVersion: cf.HttpVersion.HTTP2_AND_3
+      httpVersion: cf.HttpVersion.HTTP2_AND_3,
+      enableLogging: true,
+      logBucket: LogBucket,
+      logFilePrefix: 'cf-access-logs'
     })
 
+    // Outputs
+    new cdk.CfnOutput(this, 'SiteBucketArn', { value: this.bucket.bucketArn })
+    new cdk.CfnOutput(this, 'LogBucketArn', { value: LogBucket.bucketArn })
+    new cdk.CfnOutput(this, 'DistributionId', { value: this.distribution.distributionId })
   }
 }
