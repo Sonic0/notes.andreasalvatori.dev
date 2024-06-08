@@ -94,3 +94,13 @@ jobs:
 
       - name: Deploy to S3
         run: hugo deploy --maxDeletes -1 --invalidateCDN --target AWS-S3 --logLevel info
+
+      - name: CloudFront cache invalidation
+        run: |
+          echo "Getting CF distributions matching description 'notes.andreasalvatori.dev-prod'"
+          cloudfront_dist_ids=$(aws cloudfront list-distributions \
+            --query "DistributionList.Items[*].{id:Id,origin_domain:Origins.Items[0].DomainName,comment:Comment}[?starts_with(comment,'notes.andreasalvatori.dev-prod')].id" --output text)
+          for id in "${cloudfront_dist_ids}"; do 
+            aws cloudfront create-invalidation --distribution-id "${id}" --paths "/*"
+          done
+        shell: bash
