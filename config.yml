@@ -55,9 +55,9 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Hi there \U0001F44B"
+    Title: "Hi there \U0001F984"
     Content: >-
-      Welcome to my blog.
+      That is my personal "block notes" about hobbies
 
   ShareButtons: ["whatsapp", "telegram", "twitter"]
 

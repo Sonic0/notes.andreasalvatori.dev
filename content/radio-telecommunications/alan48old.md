@@ -5,7 +5,7 @@ tags: ["CB", "Telecommunications", "Radio"]
 author: "Me"
 showToc: true
 TocOpen: false
-draft: true
+draft: false
 hidemeta: false
 comments: false
 description: "Desc Text."
@@ -22,7 +22,7 @@ ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
-    image: "/media/images/alan48.jpg" # image path/url
+    image: "/media/images/firstalan48.jpg" # image path/url
     alt: "Modland Alan 48" # alt text
     caption: "Alan 48" # display caption under cover
     relative: false # when using page bundles set this to true
@@ -39,11 +39,13 @@ Chi, anche solo di sfuggita, ha frequentato la banda degli 11 metri conosce L'Al
 Anche se non trovo piú di nessuna utilitá trasmettere in AM o FM sui canali della 27MHz, questa radio rappresenta per me l'icona di quegli anni senza "telefoni mobili" (che io non ho vissuto) e l'inizio di una passione.
 In questo articolo andró nel tempo ad inserire tutte le info che ho collezzionato lavorando con questo apparato. Questo include qualsiasi tipo di materiali abbia reperito nel tempo. 
 Ho voluto iniziare a scrivere questo articolo perché ho avuto nel tempo alcune difficoltá a reperire le informazioni; Per i meno esperti sappiate che ci sono persone che non voglio condividere anche la piú minimale... anche se parliamo di apparati quasi obsoleti.
-Molte cose che scrivo potrebbero risultare banali, ma questa é solo una pagina di note per me stesso (ho gia scordato cosa ho mangiato ieri a pranzo).  Probabilmente ci metteró parecchio tempo a riportare tutto in questo articolo, quindi stay tuned!
+Molte cose che scrivo potrebbero risultare banali, ma questa é solo una pagina di note per me stesso (ho gia scordato cosa ho mangiato ieri a pranzo).
+Quello che leggete é stato in gran parte recuperato ed applicato insieme al mio caro amico Michele, che ringrazio e saluto.
 
 > Non sono un tecnico. Le informazioni che seguono potrebbero essere errate e portare a danni nei vostri apparati ed a voi stessi. Verificate ogni singola informazione.
 
 Se trovare qualche informazione errata fatemi sapere e la correggo (é facile trovare i miei contatti).
+Probabilmente ci metteró parecchio tempo a riportare tutto in questo articolo, quindi stay tuned!
 
 Partiamo con le foto dei 48 che ho avuto e dell'attuale in mio possesso (l'ultimo)
 
@@ -57,7 +59,7 @@ Partiamo con le foto dei 48 che ho avuto e dell'attuale in mio possesso (l'ultim
 
 ## Potenza
 
-Ovviamente la modifica per eccellenza. Il problema é reperibilitá del finale di potenza 2SC1969, online di nuovo si trovato al 99% tutta non originale. Ci sono delle alternative di cui metteró fonti e link.
+Ovviamente la modifica piú comune. Il problema é reperibilitá del finale di potenza 2SC1969, online di nuovo si trovato al 99% tutta non originale. Ci sono delle alternative di cui metteró fonti e link.
 
 Per chi é riuscito a reperire un 2SC1969 originale allora potete seguire questa guida:
 ![potenza-2sc1969](/media/images/power-mod-1969-alan48old.jpg "Modifica potenza 1969")
