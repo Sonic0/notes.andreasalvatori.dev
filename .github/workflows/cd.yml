@@ -59,6 +59,10 @@ jobs:
 
       - name: Get Hugo Theme
         run: git submodule update --init --recursive
+      
+      - name: Update env to production
+        run: |
+          sed -i "s|env: development|env: production|" config.yml
 
       - name: Build
         run: hugo --gc -DEF --baseURL "https://${{ env.URL }}"
@@ -78,8 +82,10 @@ jobs:
           role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/${{ secrets.IAM_ROLE_NAME }}
           aws-region: ${{ secrets.AWS_REGION }}
       
-      - name: Config file target substitutions
-        run: 
+      - name: Config file target update placeholders
+        run: |
+          sed -i "s|<Bucket Name>|${{ secrets.BUCKET_NAME }}|" config.yml
+          sed -i "s|<AWS region>|${{ secrets.AWS_REGION }}|" config.yml
 
       - name: Deploy to S3
         run: hugo deploy --maxDeletes -1 --invalidateCDN --target ${{ secrets.BUCKET_NAME }} --logLevel info
