@@ -57,7 +57,8 @@ params:
   homeInfoParams:
     Title: "Hi there \U0001F984"
     Content: >-
-      That is my personal "block notes" about hobbies
+      That is my personal "block notes" about hobbies. Notes 
+      Main site [here](https://andreasalvatori.dev)
 
   ShareButtons: ["whatsapp", "telegram", "twitter"]
 
@@ -116,4 +117,5 @@ deployment:
   targets:
     - name: "AWS-S3"
       URL: "s3://<Bucket Name>?region=<AWS region>"
-      exclude: "media/*"
+      exclude: "media/images/*"
+      cloudFrontDistributionID: <Distribution ID>

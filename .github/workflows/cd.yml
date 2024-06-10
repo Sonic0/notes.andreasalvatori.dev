@@ -30,11 +30,8 @@ defaults:
     shell: bash
 
 jobs:
-  build-deploy:
-    name: build and deploy
-    permissions:
-      id-token: write
-      contents: read
+  build:
+    name: build
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: ${{ github.event.inputs.hugoVersion || 'latest' }}
@@ -50,12 +47,6 @@ jobs:
         with:
           ref: ${{ github.event.inputs.release || 'main' }}
 
-      - name: Install AWS CLI v2
-        id: install-aws-cli
-        uses: unfor19/install-aws-cli-action@v1
-        with:
-          version: 2
-
       - name: Get Hugo Theme
         run: git submodule update --init --recursive
 
@@ -66,24 +57,37 @@ jobs:
         run: |
           sed -i "s|env: development|env: production|" config.yml
 
-      - name: Cache node modules
-        id: cache
-        uses: actions/cache@v4
-        with:
-          path: /home/runner/.cache/hugo_cache
-          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
-          restore-keys: |
-            ${{ runner.os }}-hugomod-
-
       - name: Build
         run: hugo --minify --cleanDestinationDir --gc -DEF --baseURL "https://${{ env.URL }}"
         env:
           URL: notes.andreasalvatori.dev
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v4            
+        with:
+          name: hugo-site
+          path: ./public
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - name: Download artifacts (Docker images) from previous workflows
+        uses: actions/download-artifact@v4
+        with:
+          name: hugo-site
+          path: ./public
       
-      - name: Config file target update placeholders
-        run: |
-          sed -i "s|<Bucket Name>|${{ secrets.BUCKET_NAME }}|" config.yml
-          sed -i "s|<AWS region>|${{ secrets.AWS_REGION }}|" config.yml
+      - name: Install AWS CLI v2
+        id: install-aws-cli
+        uses: unfor19/install-aws-cli-action@v1
+        with:
+          version: 2
 
       - name: Assume AWS IAM Role
         id: configure-aws-credentials
@@ -91,16 +95,16 @@ jobs:
         with:
           role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/${{ secrets.IAM_ROLE_NAME }}
           aws-region: ${{ secrets.AWS_REGION }}
+          mask-aws-account-id: true
 
-      - name: Deploy to S3
-        run: hugo deploy --maxDeletes -1 --invalidateCDN --target AWS-S3 --logLevel info
+      - name: Sync to S3
+        id: deployment
+        run: aws s3 sync ./public/ s3://${{ secrets.BUCKET_NAME }} --size-only --delete --exclude "media/*" --region ${{ secrets.AWS_REGION }}
 
-      - name: CloudFront cache invalidation
+      - name: Get CloudFront Distribution ID
         run: |
           echo "Getting CF distributions matching description 'notes.andreasalvatori.dev-prod'"
-          cloudfront_dist_ids=$(aws cloudfront list-distributions \
-            --query "DistributionList.Items[*].{id:Id,origin_domain:Origins.Items[0].DomainName,comment:Comment}[?starts_with(comment,'notes.andreasalvatori.dev-prod')].id" --output text)
-          for id in "${cloudfront_dist_ids}"; do 
-            aws cloudfront create-invalidation --distribution-id "${id}" --paths "/*"
-          done
-        shell: bash
+          cloudfront_dist_id=$(aws cloudfront list-distributions \
+            --query "DistributionList.Items[*].{id:Id,origin_domain:Origins.Items[0].DomainName,comment:Comment}[?starts_with(comment,'notes.andreasalvatori.dev-prod')].id" \
+            --output text)
+          aws cloudfront create-invalidation --distribution-id ${cloudfront_dist_id} --paths "/*"
