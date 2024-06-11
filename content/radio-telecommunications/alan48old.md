@@ -28,9 +28,9 @@ cover:
     relative: false # when using page bundles set this to true
     hidden: false # only hide on current single page
 editPost:
-    URL: "https://github.com/Sonic0/notes.andreasalvatori.dev/content"
-    Text: "Suggest Changes" # edit text
-    appendFilePath: true # to append file path to Edit link
+    URL: "https://github.com/Sonic0/notes.andreasalvatori.dev/blob/main/content"
+    Text: "Suggest Changes"
+    appendFilePath: true
 ---
 
 # intro
@@ -49,9 +49,9 @@ Probabilmente ci metteró parecchio tempo a riportare tutto in questo articolo, 
 
 Partiamo con le foto dei 48 che ho avuto e dell'attuale in mio possesso (l'ultimo)
 
-![48](/media/images/firstalan48.jpg "Alan")
-![48](/media/images/secondalan48.jpg "Alan")
-![48](/media/images/thirdalan48.jpg "Alan")
+![¹48](/media/images/firstalan48.jpg "Primo Alan48")
+![²48](/media/images/secondalan48.jpg "Secondo Alan48")
+![³48](/media/images/thirdalan48.jpg "Terzo Alan48")
 
 # Appunti generali
 
