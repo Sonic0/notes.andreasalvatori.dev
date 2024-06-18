@@ -55,12 +55,36 @@ Partiamo con le foto dei 48 che ho avuto e dell'attuale in mio possesso (l'ultim
 
 # Appunti generali
 
+## Schema elettrico e service
+Reperire uno schema elettrico ad alta risoluzione é sempre un'impresa per questi vecchi device. Sicuramente qualcuno lo ha ma lo custodisce gelosamente. Quindi io ho il solito che si trova ovunque.
+
+![schema-elettrico-1](/media/images/schema-elettrico-alan48old.jpg "Schema elettrico 1")
+[Schema elettrico 2 - pdf](/media/documents/schema-elettrico-alan48old.pdf)
+[Manuale servizio - pdf](/media/documents/manuale-servizio-alan48old.pdf)
+
 # Appunti modifiche
 
 ## Potenza
 
+### 2SC1969
 Ovviamente la modifica piú comune. Il problema é reperibilitá del finale di potenza 2SC1969, online di nuovo si trovato al 99% tutta non originale. Ci sono delle alternative di cui metteró fonti e link.
 
 Per chi é riuscito a reperire un 2SC1969 originale allora potete seguire questa guida:
 ![potenza-2sc1969](/media/images/power-mod-1969-alan48old.jpg "Modifica potenza 1969")
+
+In [questo video](https://www.youtube.com/watch?v=1YLwsbNN6hk) dal minito 3:50 Framich spiega come i condensatori, in prossimitá dello stadio TX, preceduti da un asterisco (*) possono essere variati per una migliore taratura dopo una modifica. Per esempio C318 ceramico da 220pF potremmo provare ad aumentare o diminuire la capacitá per migliorare le prestazioni. Lui dice di fare prove con valori in parallelo da 12pF o 33pF. Date una vista al video e lasciategli un like.
+
+### Mosfet BUZ71
+Non ho mai provato questa modifica, nel caso fatemi sapere
+[potenza-buz71 - pdf](/media/documents/sostituzione_2sc1969_con_mosfet.pdf)
+
+### Mosfet RD16HHF1
+Fonte del materiale Framich IZ8QVW
+[potenza-RD16HHF1 - pdf](/media/documents/sostituzione_2sc1969_con_mosfet.pdf)
+![potenza-RD16HHF1 - fig 1](/media/images/potenza-RD16HHF1-alan48old-fig1.jpg "Figura 1")
+![potenza-RD16HHF1 - fig 2](/media/images/potenza-RD16HHF1-alan48old-fig2.jpg "Figura 2")
+![potenza-RD16HHF1 - fig 3](/media/images/potenza-RD16HHF1-alan48old-fig3.jpg "Figura 3")
+![potenza-RD16HHF1 - fig 4](/media/images/potenza-RD16HHF1-alan48old-fig4.jpg "Figura 4")
+
+
 
