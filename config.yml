@@ -3,9 +3,9 @@ title: Andrea Salvatori's notes
 theme: ["PaperMod"]
 
 enableRobotsTXT: true
-buildDrafts: false
-buildFuture: false
-buildExpired: false
+buildDrafts: true
+buildFuture: true
+buildExpired: true
 
 minify:
   disableXML: true
@@ -16,8 +16,7 @@ params:
   title: Andrea Salvatori's notes
   description: "Notes from after-work works"
   keywords: [Blog, Notes, PaperMod]
-  author: Andrea Salvatori
-  # author: ["Me", "You"] # multiple authors
+  author: [Andrea Salvatori]
   images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "2 January, 2006"
   defaultTheme: auto # dark, light
@@ -57,8 +56,12 @@ params:
   homeInfoParams:
     Title: "Hi there \U0001F984"
     Content: >-
-      That is my personal "block notes" about hobbies. Notes 
-      Main site [here](https://andreasalvatori.dev)
+      That is my personal "block notes" about hobbies.
+  
+  socialIcons: # optional
+    - name: other
+      title: website
+      url: "https://andreasalvatori.dev"
 
   ShareButtons: ["whatsapp", "telegram", "twitter"]
 

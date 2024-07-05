@@ -1,8 +1,9 @@
 ---
-title: 'Antenna CB EH Star'
+title: "Antenna CB EH Star"
 date: 2024-06-12T00:03:48+02:00
-tags: ["CB", "Telecommunications", "Radio", "Antenna", "EH"]
-author: "Me"
+categories: ["antenna"]
+tags: ["CB", "telecommunications", "radio", "antenna", "EH"]
+author: ["Andrea Salvatori"]
 showToc: true
 TocOpen: false
 draft: false
@@ -11,7 +12,6 @@ comments: false
 description: "Antenna 11 metri di semplice realizzazione e dagli infobri molto contenuti"
 disableHLJS: true # to disable highlightjs
 disableShare: false
-disableHLJS: false
 hideSummary: false
 searchHidden: true
 ShowReadingTime: true
@@ -28,7 +28,7 @@ editPost:
 
 # Mia realizzazione
 
-La banda é effettivamente abbastanza stretta ma sono riuscito a coprire tutti i 40 canali restando con ROS massimo di 1:1.4. Ho piú o meno impostato il centrobanda sul canale 18 (27.175MHz) raggiungendo un ROS di 1:1.2 alla 23ma spira. Sono sicuro di poter migliore l'accordo usando il NanoVNA e perdendoci un pó di tempo.
+La banda é effettivamente abbastanza stretta ma sono riuscito a coprire tutti i 40 canali restando con ROS massimo di 1:1.4. <!--more--> Ho piú o meno impostato il centrobanda sul canale 18 (27.175MHz) raggiungendo un ROS di 1:1.2 alla 23ma spira. Sono sicuro di poter migliore l'accordo usando il NanoVNA e perdendoci un pó di tempo.
 
 Come da suggerimenti delle fonti ho usato tubo da impianti elettrici da 2,5cm di diametro ed un manicottio in ottone cromato per lavandini da 1 pollice. Per i cavi interni al rubi ho usato vecchi cavi rigidi in rame recuperati da vecchi impianti alettrici, sezione 1mm.
 

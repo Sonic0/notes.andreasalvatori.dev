@@ -52,13 +52,9 @@ jobs:
 
       - name: Update theme to Latest commit
         run: git submodule update --remote --merge
-      
-      - name: Update env to production
-        run: |
-          sed -i "s|env: development|env: production|" config.yml
 
       - name: Build
-        run: hugo --minify --cleanDestinationDir --gc -DEF --baseURL "https://${{ env.URL }}"
+        run: hugo --minify --cleanDestinationDir --gc -DEF -e production --baseURL "https://${{ env.URL }}"
         env:
           URL: notes.andreasalvatori.dev
           HUGO_ENVIRONMENT: production
