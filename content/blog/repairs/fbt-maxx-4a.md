@@ -54,7 +54,7 @@ Il componente rotto é questo in foto
 
 Fortunatamente lo schema elettrico é facilmente reperibile e lascio qui una copia
 [FBT Maxx 4a schema elettrico - pdf](/media/documents/fbt-prod-maxx-4a-schema-elettrico.pdf)
-Nello specifico possiamo notare come il componente abbia un valore di 10mH e sia installato con ogni coppia di piedini (sui 2 lati fisici della bobina) collegati tra loro, probabilmente per avere piú portata in corrente.
+Nello specifico possiamo notare come il componente (L10 ed L11) abbia un valore di 10mH e sia installato con ogni coppia di piedini (sui 2 lati fisici della bobina) collegati tra loro, probabilmente per avere piú portata in corrente.
 
 # La risoluzione
 
@@ -63,3 +63,12 @@ Il problema é l'erreperibilitá di questo specifico modello di componente. L'az
 Ero stato avvertito che la FBT di Recanati(MC) non fornisce pezzi di ricambio, se non tutta la scheda per intero. Infatti cosí é stato ed hanno espressamente detto che la rottura dovrá essere esaminata dal loro tecnico interno. Anche se avremmo potuto trovare un componente simile autonomamente, abbiamo preferito (per vari motivi non importanti in questo articolo) far continuare la riparazione direttamente alla FBT.
 
 Siamo in attesa che ci diano riscontri, sperando che sostituiranno solo il pezzo rotto e non tutta la scheda. Metteró poi una foto di cosa hanno fatto.
+
+# Materiale aggiuntivo
+
+Manuale utente e schemi delle varie versioni del modulo amplificato che abbiamo trovato online
+- [MAXX4_User - pdf](/media/documents/MAXX4_User.pdf)
+- [MAxX4A-1prod-2V - pdf](/media/documents/MAxX4A-1prod-2V.pdf)
+- [FBT-ELETTRONICA_MAX9SA_amplifier - pdf](/media/documents/FBT-ELETTRONICA_MAX9SA_amplifier.pdf)
+- [MAX4A_R2 - pdf](/media/documents/MAX4A_R2.pdf)
+- [MAX4A_R1 - pdf](/media/documents/MAX4A_R1.pdf)
