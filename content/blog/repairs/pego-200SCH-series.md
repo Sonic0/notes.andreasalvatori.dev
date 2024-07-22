@@ -38,11 +38,12 @@ Durante lo scorso anno un frigorista della zona ha sostituito alcune schede di c
 
 # Analisi e risoluzione del problema
 
-Per ora ho analizzato solo il modello expert della board.
-Scrivo questa nota con mesi di latenza e non ricordo se il relé compressore rimanesse costantemente eccitato o l'opposto.
-Dopo aver controllato il relé ed accertato il suo funzionamento, ho notato problemi all'alimentazione verso bobina di quest'ultimo. Andando piú a monte del circuito ho individuato il problema nell'integrato ULN2003, infatti il pin dedicato ad eccitare il relé era costantemente in un singolo stato.
+Per ora ho analizzato solo 2 board.
+Il relé compressore rimaneva costantemente eccitato (o l'esatto opposto, scrivo questa nota con mesi di ritardo e non ricordo con precisione).
+Dopo aver controllato il relé ed averne accertato il suo funzionamento, ho notato la continua fornitura di tenzione ai capi della bobina del reé anche se il compressore non sarebbe dovuto essere acceso. 
+Risalendo il circuito ho individuato il problema nell'integrato ULN2003, infatti il pin dedicato ad eccitare il relé era costantemente in un singolo stato.
 
-![200 expoert front](/media/images/pego_200SCH_202_board_front.jpeg "200 expert front")
+![200 expoert front](/media/images/pego_200SCH_202_board_front.jpg "200 expert front")
 ![200 expert back](/media/images/pego_200SCH_202_board_bottom.jpg "200 expert back")
 
 Il componente é facilmente reperibile online. La sostituzione é semplice, ma consiglio di rimuovere il buzzer e reinserirlo al termine.
@@ -53,4 +54,4 @@ Questa serie di schede sono gestibili tramite apparati terzi (Arduino o similari
 
 - [MODBUS-RTU per ECP 200 EEV - pdf](/media/documents/MODBUS-RTU_ECP200_EEV_IT.pdf)
 - [MODBUS-RTU per ECP BASE ECP EXPERT - pdf](/media/documents/MODBUS-RTU_ECP200T1_IT.pdf)
-- [Modbus Application Protocol V1-1b3 - pdf](/media/documents/)
+- [Modbus Application Protocol V1-1b3 - pdf](/media/documents/Modbus_Application_Protocol_V1_1b3.pdf)
