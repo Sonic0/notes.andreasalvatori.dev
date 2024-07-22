@@ -42,7 +42,7 @@ Hanno dato a Michele una coppia di queste casse attive di cui una da riparare. I
 ![FBT Maxx 4a esterno](/media/images/fbt_maxx_4a_modulo_amp_multir-0.jpeg "Esterno del modulo amplificato")
 ![FBT Maxx 4a esterno](/media/images/fbt_maxx_4a_modulo_amp_multir-1.jpg "Interno del modulo amplificato")
 
-Il problema era abbastanza semplice, con l'urto 2 terminali di una bobina si sono spezzati. Il mancato contatto di questo componente escludeva completamente il woofer. Provando con un paio di saldature di fortuna ci siano resi conto di come il componente avesse altri problemi. Misurando gli avvolgimenti e metterndo a confronto i risultati con quelli ottenuti dallo stesso componente a fianco, abbiamo convenuto come il primo fosse danneggiato. 
+Il problema era abbastanza semplice, con l'urto 2 terminali di una bobina si sono spezzati. Il mancato contatto di questo componente escludeva completamente il woofer. Provando con un paio di saldature di fortuna ci siano resi conto di come il componente avesse altri problemi. Misurando gli avvolgimenti e mettendolo a confronto i risultati con quelli ottenuti dallo stesso componente a fianco, abbiamo convenuto come il primo fosse danneggiato. 
 Nelle foto del modulo si puó vedere lo spazion vuoto dove era alloggiato il componente.
 
 Provando con un componente donato dal modulo funzionante (l'altro modulo della coppia) abbiamo appurato come effettivamente il problema fosse quello. Test ci hanno confermato la causa del problema. 
