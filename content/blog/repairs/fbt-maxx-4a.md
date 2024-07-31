@@ -62,7 +62,9 @@ Il problema é l'erreperibilitá di questo specifico modello di componente. L'az
 
 Ero stato avvertito che la FBT di Recanati(MC) non fornisce pezzi di ricambio, se non tutta la scheda per intero. Infatti cosí é stato ed hanno espressamente detto che la rottura dovrá essere esaminata dal loro tecnico interno. Anche se avremmo potuto trovare un componente simile autonomamente, abbiamo preferito (per vari motivi non importanti in questo articolo) far continuare la riparazione direttamente alla FBT.
 
-Siamo in attesa che ci diano riscontri, sperando che sostituiranno solo il pezzo rotto e non tutta la scheda. Metteró poi una foto di cosa hanno fatto.
+Dopo 2 settimane di attesa mi confermano che la riparazione é completata. Mi é stato confermato che non c'erano altri problemi oltre al componente giá segnalato. Questo é il risultato:
+
+![FBT Maxx 4a riparata](/media/images/fbt_maxx_4a_modulo_amp_riparato.jpg "Componente sostituito")
 
 # Materiale aggiuntivo
 
