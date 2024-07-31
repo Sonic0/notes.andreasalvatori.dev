@@ -10,7 +10,7 @@ draft: false
 hidemeta: false
 comments: false
 description: "Riparazione FBT Maxx 4a"
-canonicalURL: "https://canonical.url/to/page"
+canonicalURL: "https://notes.andreasalvatori.dev/blog/repairs/fbt-maxx-4a/"
 disableHLJS: false # to disable highlightjs
 disableShare: false
 hideSummary: false
