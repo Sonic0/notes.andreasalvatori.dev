@@ -11,6 +11,55 @@ minify:
   disableXML: true
   minifyOutput: true
 
+languages:
+  en:
+    languageName: "English"
+    disabled: false
+    languageCode: en-US
+    weight: 2
+    taxonomies:
+      category: categories
+      tag: tags
+      search: search
+    menu:
+      main:
+        - name: search
+          url: search
+          weight: 10
+        - identifier: categories
+          name: categories
+          url: categories/
+          weight: 10
+        - identifier: tags
+          name: tags
+          url: tags/
+          weight: 10
+  it:
+    languageName: "Italian"
+    disabled: false
+    languageCode: it-IT
+    weight: 1
+    taxonomies:
+      category: categories
+      tag: tags
+    menu:
+      main:
+        - name: search
+          url: search
+          weight: 10
+        - identifier: categories
+          name: categories
+          url: categories/
+          weight: 10
+        - identifier: tags
+          name: tags
+          url: tags/
+          weight: 10
+
+defaultContentLanguage: "it"
+defaultContentLanguageInSubdir: true
+enableMissingTranslationPlaceholders: true
+
 params:
   env: development # to enable google analytics, opengraph, twitter-cards and schema.
   title: Andrea Salvatori's notes
@@ -36,7 +85,7 @@ params:
   hidemeta: false
   hideSummary: false
   showtoc: true
-  tocopen: false
+  tocopen: true
 
   assets:
     # disableHLJS: true # to disable highlight.js
@@ -57,11 +106,12 @@ params:
     Title: "Hi there \U0001F984"
     Content: >-
       That is my personal "block notes" about hobbies.
+      Social links in the [personal site](https://andreasalvatori.dev).
   
-  socialIcons: # optional
-    - name: other
-      title: website
-      url: "https://andreasalvatori.dev"
+  # socialIcons: # optional
+  #   - name: other
+  #     title: website
+  #     url: "https://andreasalvatori.dev"
 
   ShareButtons: ["whatsapp", "telegram", "twitter"]
 
@@ -70,9 +120,9 @@ params:
   #     SiteVerificationTag: "XYZabc"
 
   cover:
-    hidden: true # hide everywhere but not in structured data
+    hidden: false # hide everywhere but not in structured data
     hiddenInList: true # hide on list pages and home
-    hiddenInSingle: true # hide on single page
+    hiddenInSingle: false # hide on single page
 
   editPost:
     URL: "https://github.com/Sonic0/notes.andreasalvatori.dev/edit/main/content"
@@ -90,16 +140,7 @@ params:
     minMatchCharLength: 0
     limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
     keys: ["title", "permalink", "summary", "content"]
-menu:
-  main:
-    - identifier: categories
-      name: categories
-      url: /categories/
-      weight: 10
-    - identifier: tags
-      name: tags
-      url: /tags/
-      weight: 20
+
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 pygmentsUseClasses: true
 markup:
