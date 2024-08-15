@@ -1,6 +1,6 @@
 ---
 title: "Storie di riparazioni - FBT Maxx 4a"
-date: 2024-07-12T00:03:48+02:00
+date: 2024-06-12T00:03:48+02:00
 categories: ["repairs"]
 tags: ["repairs", "audio", "FBT"]
 author: ["Andrea Salvatori"]
@@ -22,7 +22,7 @@ ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
-    image: "/media/images/fbt_maxx_4a_modulo_amp_multir-0.jpg" # image path/url
+    image: "/media/images/fbt_maxx_4a_modulo_amp_multir-0.jpg"
     alt: "FBT Maxx 4a" # alt text
     caption: "Modulo FBT Maxx 4a" # display caption under cover
     relative: false # when using page bundles set this to true
