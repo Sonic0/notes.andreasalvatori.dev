@@ -13,7 +13,7 @@ canonicalURL: "https://notes.andreasalvatori.dev/blog/hardware/fujitsu-futro-s92
 disableHLJS: false # to disable highlightjs
 disableShare: false
 hideSummary: false
-searchHidden: true
+searchHidden: false
 ShowReadingTime: true
 ShowBreadCrumbs: true
 ShowPostNavLinks: true

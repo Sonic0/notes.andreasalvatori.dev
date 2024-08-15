@@ -14,7 +14,7 @@ canonicalURL: "https://notes.andreasalvatori.dev/blog/repairs/fbt-maxx-4a/"
 disableHLJS: false # to disable highlightjs
 disableShare: false
 hideSummary: false
-searchHidden: true
+searchHidden: false
 ShowReadingTime: true
 ShowBreadCrumbs: true
 ShowPostNavLinks: true

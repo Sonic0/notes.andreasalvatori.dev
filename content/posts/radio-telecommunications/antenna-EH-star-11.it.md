@@ -13,7 +13,7 @@ description: "Antenna 11 metri di semplice realizzazione e dagli infobri molto c
 disableHLJS: true # to disable highlightjs
 disableShare: false
 hideSummary: false
-searchHidden: true
+searchHidden: false
 ShowReadingTime: true
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
