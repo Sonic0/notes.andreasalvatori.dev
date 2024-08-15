@@ -45,6 +45,6 @@ Result of using the `lspci -vvv` command before and after the BIOS update:
 - `LnkSta: Speed 5GT/s, Width x1`
 
 Files and guidelines to apply the BIOS parameter update are available in the links posted before, but I want to add some notes and additional files:
-- Technical specifications of the motherboard series [mini-itx-d3313 - pdf](/media/documents/v14-mini-itx-d3313-s4-s5-s6-12-2015.pdf). This document contains BIOS update procedure.
+- Technical specifications of the motherboard series [mini-itx-d3313 - pdf](/media/documents/v14-mini-itx-d3313-s4-s5-s6-12-2015.pdf). This document contains BIOS update procedure (You must perform this task before updating the BIOS parameters.).
 - The [freeDOS](https://www.freedos.org/download/) lite version is probably enough
-- BIOS version [V4.6.5.4 - R1.18.0 (10/07/2018) - zip](/media/documents/DOS_BIOS_UPDATE_D3313A1x_V4654R1180.pdf) update files to apply with FreeDOS. Files are specific for the motherboard D3313-A1x (code available into BIOS informations page).
+- BIOS version [V4.6.5.4 - R1.18.0 (10/07/2018) - zip](/media/documents/DOS_BIOS_UPDATE_D3313A1x_V4654R1180.pdf) update files to apply with FreeDOS. Files are specific for the (using) motherboard D3313-A1x (check te version in the BIOS informations page).
