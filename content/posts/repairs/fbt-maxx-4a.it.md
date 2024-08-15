@@ -10,7 +10,7 @@ draft: false
 hidemeta: false
 comments: false
 description: "Riparazione FBT Maxx 4a"
-canonicalURL: "https://notes.andreasalvatori.dev/blog/repairs/fbt-maxx-4a/"
+canonicalURL: "https://notes.andreasalvatori.dev/posts/repairs/fbt-maxx-4a/"
 disableHLJS: false # to disable highlightjs
 disableShare: false
 hideSummary: false
@@ -22,7 +22,7 @@ ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
-    image: "/media/images/fbt_maxx_4a_modulo_amp_multir-0.jpg"
+    image: "https://notes.andreasalvatori.dev/media/images/fbt_maxx_4a_modulo_amp_multir-0.jpg"
     alt: "FBT Maxx 4a" # alt text
     caption: "Modulo FBT Maxx 4a" # display caption under cover
     relative: false # when using page bundles set this to true

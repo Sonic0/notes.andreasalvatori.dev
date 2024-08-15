@@ -10,7 +10,6 @@ draft: false
 hidemeta: false
 comments: false
 description: "Riparazione Pego 202 base & expert"
-canonicalURL: "https://canonical.url/to/page"
 disableHLJS: false # to disable highlightjs
 disableShare: false
 hideSummary: false
@@ -22,7 +21,7 @@ ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
-    image: "/media/images/pego_202_series.jpg" # image path/url
+    image: "https://notes.andreasalvatori.dev/media/images/pego_202_series.jpg" # image path/url
     alt: "Pego 202 series" # alt text
     caption: "Pego 202 series" # display caption under cover
     relative: false # when using page bundles set this to true

@@ -20,7 +20,7 @@ ShowWordCount: true
 ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
-    image: "https://notes.andreasalvatori.dev-prod/media/images/sonicpointACe.jpg"
+    image: "https://notes.andreasalvatori.dev/media/images/sonicpointACe.jpg"
     alt: "Dell SonicPoint ACe (APL26-AE)"
     caption: "Dell SonicPoint ACe (APL26-AE)"
     relative: false
