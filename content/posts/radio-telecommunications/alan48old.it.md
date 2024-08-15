@@ -10,7 +10,6 @@ draft: false
 hidemeta: false
 comments: false
 description: "Appunti su riparazioni e modifiche Alan 48 old"
-canonicalURL: "https://canonical.url/to/page"
 disableHLJS: false # to disable highlightjs
 disableShare: false
 hideSummary: false
