@@ -34,7 +34,7 @@ editPost:
 Con solo 25 euro piú spedizione venni in possesso di un access point di fascia business Dell SonicWall SonicPoint ACe (APL26-AE). Questi AP sono quasi sempre inutilizzabili per scopi casalinghi perché hanno bisogno di una unitá centrale che funge da controllore. Come avere un AP Ubiquity, ma dovendo pagare centinaia di euro in licenze ed hardware. 
 Il motivo che mi spinse all'acquisto é stata una speranza dovuta a questo tread nel [forum di OpenWrt](https://forum.openwrt.org/t/experiences-with-sonicpoint-ace-with-openwrt/61456). Come sappiamo l'OpenSource é fantastico ed anche in questo caso ci ha regalato la possibilitá di sbloccare un device che al tempo costava centinaia di euro.
 
-![SonicPoint ACe ports](/media/images/dell-sonicpoint-ace-available-ports.jpg)
+![SonicPoint ACe ports](/media/images/dell-sonicpoint-ace-available-ports.png)
 Come si puó evincere dalla guida il flash del nuovo firmware deve essere fatto tramite RS232, usando la porta _console_ del device. Dato che il cavo necessario ha una configurazione diversa da un qualsiasi cavo con standard Cisco, possiamo seguire questi 2 metodi:
 - Creare un adattatore da Cisco a Dell https://www.sonicwall.com/support/knowledge-base/cisco-to-sonicwall-console-cable-translation-cable/170823194044870
 - Creare un cavo RS232 -> rj45 https://www.sonicwall.com/support/knowledge-base/how-do-i-make-a-console-cable-for-sonicwall-firewall-appliances/170505608988182
