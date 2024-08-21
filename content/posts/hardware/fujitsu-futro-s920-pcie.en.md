@@ -48,3 +48,5 @@ Files and guidelines to apply the BIOS parameter update are available in the lin
 - Technical specifications of the motherboard series [mini-itx-d3313 - pdf](/media/documents/v14-mini-itx-d3313-s4-s5-s6-12-2015.pdf). This document contains BIOS update procedure (You must perform this task before updating the BIOS parameters.).
 - The [freeDOS](https://www.freedos.org/download/) lite version is probably enough
 - BIOS version [V4.6.5.4 - R1.18.0 (10/07/2018) - zip](/media/documents/DOS_BIOS_UPDATE_D3313A1x_V4654R1180.pdf) update files to apply with FreeDOS. Files are specific for the (using) motherboard D3313-A1x (check te version in the BIOS informations page).
+
+If you are looking for a PCIe raiser for your Futro S920, searching online I found the WLGQ RC-P-002 on Amazon Italy https://amzn.eu/d/2stOeBK. Even though it is an 8X version, it is compatible with the S920 motherboard port.

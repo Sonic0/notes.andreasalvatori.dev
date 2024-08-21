@@ -49,3 +49,5 @@ Documenti e guide guida per l'applicazione dell'aggiornamento del parametro del 
 - Specifich della serie di schede madri [mini-itx-d3313 - pdf](/media/documents/v14-mini-itx-d3313-s4-s5-s6-12-2015.pdf). Questo documento contiene la guida per eseguire l'aggiornamento del BIOS (da fare prima dell'aggiornamento del parametro).
 - La versione [freeDOS](https://www.freedos.org/download/) Lite é probabilmente sufficiente per il nostro scopo.
 - Ultimo pacchetto per aggiornamento del BIOS [V4.6.5.4 - R1.18.0 (10/07/2018) - zip](/media/documents/DOS_BIOS_UPDATE_D3313A1x_V4654R1180.pdf), da applicare tramite FreeDOS. Questo zip contiene i file specifici per il mio modello di scheda madre D3313-A1x (verificare la versione nelle info della scheda madre entrando nelle configurazioni del BIOS).
+
+Sta state cercando un raiser PCIe per la vostra scheda di rete aggiuntiva, cercando in rete ho trovato il WLGQ RC-P-002 su Amazon Italia https://amzn.eu/d/2stOeBK. Anche se é un 8X, é compatibile con lo slot PCIe 4X nella motherboard.
