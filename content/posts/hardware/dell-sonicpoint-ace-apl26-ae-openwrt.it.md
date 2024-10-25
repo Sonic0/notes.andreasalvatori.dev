@@ -47,9 +47,10 @@ Dato che il cavo necessario ha una configurazione diversa da un qualsiasi cavo c
 - Creare un adattatore da Cisco a Dell https://www.sonicwall.com/support/knowledge-base/cisco-to-sonicwall-console-cable-translation-cable/170823194044870
 - Creare un cavo RS232 -> rj45 https://www.sonicwall.com/support/knowledge-base/how-do-i-make-a-console-cable-for-sonicwall-firewall-appliances/170505608988182
 Io ho utilizzato questo convertitore USB-RS232, acquistato su Amazon https://amzn.eu/d/2t1AgW8, ed ho creato un cavo da RS232 a RJ45 utilizzando questi connettori https://amzn.eu/d/eq7mpVm e seguendo il metodo 2 elencato precedentemente.
+![SonicPoint ACe RD232 adapter](/media/images/dell-sonicpoint-ace-rd232-adapter.jpg)
 
 La versione del firmare originale da cui sono partito era SonicOS 8.8.0.0-21o e non ci sono state differenze con quanto scritto nella guida.
-![SonicPoint ACe ports](/media/images/dell-sonicpoint-ace-safe-mode.jpg)
+![SonicPoint ACe SafeMode](/media/images/dell-sonicpoint-ace-safe-mode.jpg)
 
 Terminata l'installazione di OpenWrt ho dovuto installare Luci seguendo questi steps:
 - https://openwrt.org/docs/guide-quick-start/ssh_connect_to_the_internet_and_install_luci
