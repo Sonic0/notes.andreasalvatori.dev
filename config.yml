@@ -70,6 +70,7 @@ params:
   DateFormat: "2 January, 2006"
   defaultTheme: auto # dark, light
   disableThemeToggle: false
+  social: true # Workaround waiting for PR #1620
 
   ShowReadingTime: false
   ShowShareButtons: true
