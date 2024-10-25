@@ -51,9 +51,13 @@ I used this USB-RS232 converter, bought on Amazon https://amzn.eu/d/2t1AgW8, and
 The original firmware version I started with was SonicOS 8.8.0.0-21o, and I encountered no differences from what’s written in the guide.
 ![SonicPoint ACe SafeMode](/media/images/dell-sonicpoint-ace-safe-mode.jpg)
 
-After installing OpenWrt, I had to install Luci by following these steps:
+After installing OpenWrt, I had to install LuCI by following these steps:
 - https://openwrt.org/docs/guide-quick-start/ssh_connect_to_the_internet_and_install_luci
 - https://openwrt.org/docs/guide-user/luci/luci.essentials#basic_installation
+
+After LuCI installation I encountered a warning about system running in recovery mode.
+![SonicPoint ACe LuCI recovery mode](/media/images/dell-sonicpoint-ace-luci-warning.jpg)
+I have had to flash the sysupgrade image from the OpenWrt snapshots using the LuCI web UI to resolve it.
 
 ### Update 10/25/2024
 The device seems stable, but WiFi coverage is quite limited compared to what one might expect. 
