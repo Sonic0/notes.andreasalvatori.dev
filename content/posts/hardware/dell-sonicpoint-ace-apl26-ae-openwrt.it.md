@@ -31,16 +31,31 @@ editPost:
     appendFilePath: true # to append file path to Edit link
 ---
 
-Con solo 25 euro piú spedizione venni in possesso di un access point di fascia business Dell SonicWall SonicPoint ACe (APL26-AE). Questi AP sono quasi sempre inutilizzabili per scopi casalinghi perché hanno bisogno di una unitá centrale che funge da controllore. Come avere un AP Ubiquity, ma dovendo pagare centinaia di euro in licenze ed hardware. 
-Il motivo che mi spinse all'acquisto é stata una speranza dovuta a questo tread nel [forum di OpenWrt](https://forum.openwrt.org/t/experiences-with-sonicpoint-ace-with-openwrt/61456). Come sappiamo l'OpenSource é fantastico ed anche in questo caso ci ha regalato la possibilitá di sbloccare un device che al tempo costava centinaia di euro.
+Ora che il supporto ufficiale per gli access point di fascia business Dell SonicWall SonicPoint ACe (APL26-AE) é terminato, si possono trovare a prezzi accettabili. 
+Nel mio caso sono riuscito ad acquistarlo per 25 euro, compresa spedizione. 
+Questo AP permette di essere utilizzato anche in modalitá standalone, ma le funzionalitá messe a disposizione sono molto limitate. 
+Per chi non lo sapesse, questi apparati debbono essere configurati tramite un'unitá di controllo che, se non erro, é spesso rappresentata da un router/firewall (sempre della serie Sonic).
+Nel mio caso necessitavo della configurazione di VLANs, quindi l'installazione di OpenWrt é stata l'unica alternativa.
 
-![SonicPoint ACe ports](/media/images/dell-sonicpoint-ace-available-ports.png)
-Come si puó evincere dalla guida il flash del nuovo firmware deve essere fatto tramite RS232, usando la porta _console_ del device. Dato che il cavo necessario ha una configurazione diversa da un qualsiasi cavo con standard Cisco, possiamo seguire questi 2 metodi:
+La guida all'installazione é consultabile in questo nel [forum di OpenWrt](https://forum.openwrt.org/t/experiences-with-sonicpoint-ace-with-openwrt/61456). Cercheró di spiegare i prerequisiti e dettagli post installazione.
+
+Queste sono le porte messe disponibili nell'apparato:
+![SonicPoint ACe ports](/media/images/dell-sonicpoint-ace-available-ports.jpg)
+
+Per effettuare il flash del nuovo firmware ci si deve collegare all'apparato usando la porta _console_ del device. 
+Dato che il cavo necessario ha una configurazione diversa da un qualsiasi cavo con standard Cisco, possiamo seguire questi 2 metodi:
 - Creare un adattatore da Cisco a Dell https://www.sonicwall.com/support/knowledge-base/cisco-to-sonicwall-console-cable-translation-cable/170823194044870
 - Creare un cavo RS232 -> rj45 https://www.sonicwall.com/support/knowledge-base/how-do-i-make-a-console-cable-for-sonicwall-firewall-appliances/170505608988182
+Io ho utilizzato questo convertitore USB-RS232, acquistato su Amazon https://amzn.eu/d/2t1AgW8, ed ho creato un cavo da RS232 a RJ45 utilizzando questi connettori https://amzn.eu/d/eq7mpVm e seguendo il metodo 2 elencato precedentemente.
 
-L'installazione, almeno per ora, é stata portata a termine partendo da SonicOS 8.8.0.0-21o e 9.0.1.0.
+La versione del firmare originale da cui sono partito era SonicOS 8.8.0.0-21o e non ci sono state differenze con quanto scritto nella guida.
+![SonicPoint ACe ports](/media/images/dell-sonicpoint-ace-safe-mode.jpg)
 
-Successivamente all'installazione di OpenWrt ho installato Luci seguendo questi steps:
+Terminata l'installazione di OpenWrt ho dovuto installare Luci seguendo questi steps:
 - https://openwrt.org/docs/guide-quick-start/ssh_connect_to_the_internet_and_install_luci
 - https://openwrt.org/docs/guide-user/luci/luci.essentials#basic_installation
+
+### Update del 25/10/2024
+L'apparato sembra stabile ma la copertura wifi é molto limitata, rispetto a quello che ci si aspetterebbe. 
+Anche impostando la massima potenza di trasmissione, non riesce a passare da un piano della casa all'altro, anche posizionandosi proprio sopra di lui.
+Quando avró piú tempo effettueró maggiori ricerce riguardo la potenza di trasmissione.
