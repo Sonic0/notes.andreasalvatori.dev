@@ -1,5 +1,5 @@
 ---
-title: "Access point Dell SonicPoint ACe (APL26-AE) OpenWrt"
+title: "Access point Dell SonicPoint ACe (APL26-0AE) OpenWrt"
 date: 2024-07-31T23:30:00+02:00
 categories: ["hardware"]
 tags: ["homelab", "sonicpoint", "sonicwall", "access-point"]
@@ -21,8 +21,8 @@ ShowRssButtonInSectionTermList: true
 UseHugoToc: true
 cover:
     image: "https://notes.andreasalvatori.dev/media/images/sonicpointACe.jpg"
-    alt: "Dell SonicPoint ACe (APL26-AE)"
-    caption: "Dell SonicPoint ACe (APL26-AE)"
+    alt: "Dell SonicPoint ACe (APL26-0AE)"
+    caption: "Dell SonicPoint ACe (APL26-0AE)"
     relative: false
     hidden: false
 editPost:
@@ -31,7 +31,7 @@ editPost:
     appendFilePath: true
 ---
 
-Now that official support has ended for Dell SonicWall SonicPoint ACe (APL26-AE) business-grade access points, they can be found at reasonable prices. 
+Now that official support has ended for Dell SonicWall SonicPoint ACe (APL26-0AE) business-grade access points, they can be found at reasonable prices. 
 I managed to purchase one for 25 euros, including shipping. 
 This AP can also be used in standalone mode, but its features are quite limited. For those unfamiliar, these devices need to be configured through a controller, usually a Sonic router/firewall (as far as I know).
 In my case, I needed VLAN configuration, so installing OpenWrt was my only option.
